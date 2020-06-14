@@ -1,13 +1,12 @@
 import React from 'react';
-import { Youtube } from 'styled-icons/fa-brands';
-import { YtdHeader, YtdTextHeader, YtdNavbar } from './styled';
+import { YtdHeader, YtdNavbar } from './styled';
+import logo from '../../assets/youtube-logo.png';
 
 export default function Header() {
   return (
     <YtdHeader>
       <YtdNavbar>
-        <Youtube color="#e12" size={50} />
-        <YtdTextHeader>Youtube Timer Search</YtdTextHeader>
+        <img style={{ maxWidth: '130px' }} src={logo} alt="image youtube" />
       </YtdNavbar>
     </YtdHeader>
   );
