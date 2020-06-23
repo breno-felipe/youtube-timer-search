@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
 export const YtdForm = styled.form`
+  width: 100%;
+  max-width: 1080px;
+  margin: 65px auto;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 4em;
+  align-items: center;
+  margin-bottom: 20px;
+  > a {
+    margin-bottom: 20px;
+  }
 `;
+
+export const YtdInput = styled.input``;

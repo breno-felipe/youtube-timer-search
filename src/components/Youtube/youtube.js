@@ -13,7 +13,7 @@ export default function Youtube() {
 
   useEffect(async () => {
     await fetch(
-      `https://www.googleapis.com/youtube/v3/search?&type=video&q=${text}&part=snippet&maxResults=${MAX_RESULTS}&key=${GOOGLE_API_KEY}`
+      `https://www.googleapis.com/youtube/v3/search?&type=music&q=restart&part=snippet&maxResults=${MAX_RESULTS}&key=${GOOGLE_API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => setYtd(data.items));
@@ -21,17 +21,22 @@ export default function Youtube() {
 
   return (
     <>
+      <input
+        type="text"
+        placeholder="Digite algo aqui"
+        value={text}
+        onChange={changeInput}
+      />
       <YtdForm>
-        <input
-          type="text"
-          placeholder="Digite algo aqui"
-          value={text}
-          onChange={changeInput}
-        />
-
         {ytd.map((y) => (
-          <div key={y.id.videoId}>
-            <span>{y.snippet.title}</span>
+          <div id="youtube" key={y.id.videoId}>
+            <a
+              href={`https://www.youtube.com/watch?v=${y.id.videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {y.snippet.title}
+            </a>
           </div>
         ))}
       </YtdForm>
