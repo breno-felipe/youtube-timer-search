@@ -1,5 +1,5 @@
 <h1>Yotuube Timer</h1>
 
-### Projeto desatualizado
+### Este projeto desatualizado
 
-projeto atualizado [clique aqui](https://github.com/breno-felipe/youtube_challenge)
+### Para acessar o projeto atualizado [clique aqui](https://github.com/breno-felipe/youtube_challenge)
